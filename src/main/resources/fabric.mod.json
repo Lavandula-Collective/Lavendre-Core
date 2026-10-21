@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "lavendre_core",
+  "version": "${version}",
+  "name": "Lavendre Core",
+  "description": "Core mod for the Lavendre modpack. Ships the Lavendre resource & data pack and other features.",
+  "authors": [
+    "Aerhazu (Lavandula Collective)"
+  ],
+  "contact": {
+    "homepage": "https://modrinth.com/mod/lavendre-core",
+    "issues": "https://github.com/Lavandula-Collective/Lavendre-Core/issues"
+  },
+  "license": "All Rights Reserved",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.lavandula.lavendrecore.LavendreCore"
+    ],
+    "client": [
+      "com.lavandula.lavendrecore.client.LavendreCoreClient"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.16.0",
+    "minecraft": "~1.21.1",
+    "java": ">=21",
+    "fabric-api": "*"
+  },
+  "icon": "assets/lavendre_core/icon.png"
+}
