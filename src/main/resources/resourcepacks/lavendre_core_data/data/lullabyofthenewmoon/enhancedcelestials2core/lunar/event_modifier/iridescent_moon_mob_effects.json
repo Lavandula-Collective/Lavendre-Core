@@ -1,0 +1,33 @@
+{
+  "type": "enhancedcelestials2core:mob_effects",
+  "settings": {
+    "effects": [
+      {
+        "filter": {
+          "type": "corgilib:any"
+        },
+        "mob_effect": {
+          "ambient": true,
+          "amplifier": 0,
+          "duration_in_ticks": 1210,
+          "effect": "minecraft:speed",
+          "show_icon": false,
+          "visible": false
+        }
+      },
+      {
+        "filter": {
+          "type": "corgilib:any"
+        },
+        "mob_effect": {
+          "ambient": true,
+          "amplifier": 0,
+          "duration_in_ticks": 1210,
+          "effect": "minecraft:slow_falling",
+          "show_icon": false,
+          "visible": false
+        }
+      }
+    ]
+  }
+}

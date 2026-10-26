@@ -1,0 +1,16 @@
+{
+  "type": "enhancedcelestials2core:block_item_drop",
+  "settings": {
+    "settings": {
+      "drop_enhancer": [
+        {
+          "minimum_count": 1,
+          "multipliers": {
+            "minecraft:amethyst_shard": 3.0,
+            "minecraft:lapis_lazuli": 2.0
+          }
+        }
+      ]
+    }
+  }
+}

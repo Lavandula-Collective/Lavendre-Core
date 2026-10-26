@@ -1,0 +1,15 @@
+{
+  "modifiers": [
+    "lullabyofthenewmoon:super_blue_moon_sky_light_color",
+    "lullabyofthenewmoon:super_blue_moon_moon_texture_color",
+    "lullabyofthenewmoon:super_blue_moon_moon_size",
+    "lullabyofthenewmoon:super_blue_moon_sound_track",
+    "lullabyofthenewmoon:super_blue_moon_text_components",
+    "lullabyofthenewmoon:super_blue_moon_name_color",
+    "lullabyofthenewmoon:super_blue_moon_mob_effects",
+    "lullabyofthenewmoon:super_blue_moon_anvil_cost",
+    "lullabyofthenewmoon:super_blue_moon_enchantment_cost",
+    "lullabyofthenewmoon:super_blue_moon_experience",
+    "lullabyofthenewmoon:super_blue_moon_beacon_radius"
+  ]
+}

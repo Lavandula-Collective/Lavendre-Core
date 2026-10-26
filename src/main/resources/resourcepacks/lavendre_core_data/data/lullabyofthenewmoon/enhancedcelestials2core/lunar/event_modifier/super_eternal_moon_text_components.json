@@ -1,0 +1,23 @@
+{
+  "type": "enhancedcelestials2core:text_components",
+  "settings": {
+    "components": {
+      "end_notification": {
+        "type": "CHAT",
+        "component": {
+          "key": "lullabyofthenewmoon.notification.super_eternal_moon.set"
+        }
+      },
+      "start_notification": {
+        "type": "CHAT",
+        "component": {
+          "key": "lullabyofthenewmoon.notification.super_eternal_moon.rise",
+          "style": {
+            "bold": true,
+            "color": "yellow"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "dimensions": {
+    "minecraft:overworld": {
+      "priority": 0,
+      "spawn_requirements": {
+        "rules": [
+          {
+            "type": "enhancedcelestials2core:min_nights_between",
+            "settings": {
+              "min_nights": 30
+            }
+          },
+          {
+            "type": "enhancedcelestials2core:valid_moon_phase",
+            "settings": {
+              "valid_moon_phases": [
+                4
+              ]
+            }
+          }
+        ],
+        "weight": 2
+      }
+    }
+  },
+  "lunar_event": "lullabyofthenewmoon:iridescent_moon"
+}

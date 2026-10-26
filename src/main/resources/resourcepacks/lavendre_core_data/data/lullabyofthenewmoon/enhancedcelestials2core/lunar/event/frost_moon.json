@@ -1,0 +1,12 @@
+{
+  "modifiers": [
+    "lullabyofthenewmoon:frost_moon_sky_light_color",
+    "lullabyofthenewmoon:frost_moon_moon_texture_color",
+    "lullabyofthenewmoon:frost_moon_moon_size",
+    "lullabyofthenewmoon:frost_moon_text_components",
+    "lullabyofthenewmoon:frost_moon_sound_track",
+    "lullabyofthenewmoon:frost_moon_force_surface_spawning",
+    "lullabyofthenewmoon:frost_moon_spawn_category_multiplier",
+    "lullabyofthenewmoon:frost_moon_name_color"
+  ]
+}
