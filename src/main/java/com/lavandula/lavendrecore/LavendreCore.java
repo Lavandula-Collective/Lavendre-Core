@@ -20,9 +20,6 @@ public class LavendreCore implements ModInitializer {
     @Override
     public void onInitialize() {
         FabricLoader.getInstance().getModContainer(MOD_ID).ifPresent(container -> {
-            // Runs on client and server, so both packs register everywhere.
-            // They show up in the pack selectors. Ordering and forcing is handled
-            // by the modpack (Resource Pack Overrides), not by this mod.
             ResourceManagerHelper.registerBuiltinResourcePack(
                     RESOURCE_PACK_ID, container,
                     Text.literal("Lavendre Core Resources"),
@@ -32,8 +29,9 @@ public class LavendreCore implements ModInitializer {
                     DATA_PACK_ID, container,
                     Text.literal("Lavendre Core Data"),
                     ResourcePackActivationType.DEFAULT_ENABLED);
-        });
 
-        LOGGER.info("Lavendre Core loaded.");
+            String version = container.getMetadata().getVersion().getFriendlyString();
+            LOGGER.info("Lavendre Core v{} loaded.", version);
+        });
     }
 }
