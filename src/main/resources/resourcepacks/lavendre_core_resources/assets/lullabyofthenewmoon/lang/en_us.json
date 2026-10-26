@@ -1,0 +1,23 @@
+{
+  "lullabyofthenewmoon.notification.blue_moon.rise": "The \"Blue Moon\" rises... Luck, XP, and enchanting favor you.",
+  "lullabyofthenewmoon.notification.blue_moon.set": "The \"Blue Moon\" sets... Your luck fades.",
+  "lullabyofthenewmoon.notification.super_blue_moon.rise": "The \"Super Blue Moon\" rises... Fortune overflows. XP soars and costs drop.",
+  "lullabyofthenewmoon.notification.super_blue_moon.set": "The \"Super Blue Moon\" sets... Your fortune fades.",
+  "lullabyofthenewmoon.notification.eternal_moon.rise": "The \"Eternal Moon\" rises... Your crops provide a better harvest.",
+  "lullabyofthenewmoon.notification.eternal_moon.set": "The \"Eternal Moon\" sets...",
+  "lullabyofthenewmoon.notification.super_eternal_moon.rise": "The \"Super Eternal Moon\" rises... Your crops provide an exceptional harvest.",
+  "lullabyofthenewmoon.notification.super_eternal_moon.set": "The \"Super Eternal Moon\" sets...",
+  "lullabyofthenewmoon.notification.frost_moon.rise": "The \"Frost Moon\" rises... The night turns quiet. Few monsters stir.",
+  "lullabyofthenewmoon.notification.frost_moon.set": "The \"Frost Moon\" sets... The cold lifts.",
+  "lullabyofthenewmoon.notification.super_frost_moon.rise": "The \"Super Frost Moon\" rises... Monsters vanish and a cold calm shields you.",
+  "lullabyofthenewmoon.notification.super_frost_moon.set": "The \"Super Frost Moon\" sets... The calm fades.",
+  "lullabyofthenewmoon.notification.iridescent_moon.rise": "The \"Iridescent Moon\" rises... The night shimmers. Something feels different.",
+  "lullabyofthenewmoon.notification.iridescent_moon.set": "The \"Iridescent Moon\" sets... The shimmer fades.",
+  "lunar.event.lullabyofthenewmoon.blue_moon": "Blue Moon",
+  "lunar.event.lullabyofthenewmoon.super_blue_moon": "Super Blue Moon",
+  "lunar.event.lullabyofthenewmoon.eternal_moon": "Eternal Moon",
+  "lunar.event.lullabyofthenewmoon.super_eternal_moon": "Super Eternal Moon",
+  "lunar.event.lullabyofthenewmoon.frost_moon": "Frost Moon",
+  "lunar.event.lullabyofthenewmoon.super_frost_moon": "Super Frost Moon",
+  "lunar.event.lullabyofthenewmoon.iridescent_moon": "Iridescent Moon"
+}

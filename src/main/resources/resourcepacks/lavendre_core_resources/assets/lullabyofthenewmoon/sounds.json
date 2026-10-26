@@ -1,0 +1,56 @@
+{
+  "blue_moon": {
+    "sounds": [
+      {
+        "name": "lullabyofthenewmoon:blue_moon",
+        "volume": 1.0,
+        "pitch": 1.0
+      }
+    ]
+  },
+  "eternal_moon": {
+    "sounds": [
+      {
+        "name": "lullabyofthenewmoon:eternal_moon",
+        "volume": 1.0,
+        "pitch": 1.0
+      }
+    ]
+  },
+  "frost_moon": {
+    "sounds": [
+      {
+        "name": "lullabyofthenewmoon:frost_moon",
+        "volume": 1.0,
+        "pitch": 1.0
+      }
+    ]
+  },
+  "iridescent_moon": {
+    "sounds": [
+      {
+        "name": "lullabyofthenewmoon:iridescent_moon",
+        "volume": 1.0,
+        "pitch": 1.0
+      }
+    ]
+  },
+  "super_eternal_moon": {
+    "sounds": [
+      {
+        "name": "lullabyofthenewmoon:super_eternal_moon",
+        "volume": 1.0,
+        "pitch": 1.0
+      }
+    ]
+  },
+  "super_frost_moon": {
+    "sounds": [
+      {
+        "name": "lullabyofthenewmoon:super_frost_moon",
+        "volume": 1.0,
+        "pitch": 1.0
+      }
+    ]
+  }
+}
