@@ -2,14 +2,21 @@
   "type": "farmersdelight:cutting",
   "ingredients": [
     {
-      "item": "hybrid_aquatic:water_lettuce"
+      "item": "farm_and_charm:oat"
     }
   ],
   "result": [
     {
       "item": {
-        "count": 2,
-        "id": "hybrid_aquatic:sea_lettuce"
+        "count": 1,
+        "id": "farm_and_charm:oat_seeds"
+      }
+    },
+    {
+      "chance": 0.5,
+      "item": {
+        "count": 1,
+        "id": "farmersdelight:straw"
       }
     }
   ],
