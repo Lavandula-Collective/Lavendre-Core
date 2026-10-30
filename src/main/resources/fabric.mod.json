@@ -14,12 +14,13 @@
   "license": "All Rights Reserved",
   "environment": "*",
   "entrypoints": {
-    "main": [
-      "com.lavandula.lavendrecore.LavendreCore"
-    ],
-    "client": [
-      "com.lavandula.lavendrecore.client.LavendreCoreClient"
-    ]
+    "main": ["com.lavandula.lavendrecore.LavendreCore"],
+    "client": ["com.lavandula.lavendrecore.client.LavendreCoreClient"],
+    "modmenu": ["com.lavandula.lavendrecore.client.LavendreModMenu"]
+  },
+  "suggests": {
+    "cloth-config": "*",
+    "modmenu": "*"
   },
   "depends": {
     "fabricloader": ">=0.16.0",
