@@ -1,0 +1,117 @@
+import groovy.json.JsonOutput
+import groovy.json.JsonSlurper
+import org.gradle.api.GradleException
+
+/*
+ * Lavendre Core pack generator.
+ *
+ * You write ONE copy of your datapack content, split into modules:
+ *
+ *   src/modules/<module_id>/data/...        your datapack files
+ *   src/modules/<module_id>/module.json     optional: {"name": "...", "mod": "..."}
+ *   src/modules/<module_id>/icon.png        optional icon for that module
+ *   src/modules/pack.png                    optional shared fallback icon
+ *
+ * On every build this script generates, inside the jar:
+ *   - resourcepacks/lavendre_core_data              all modules merged (normal mode)
+ *   - resourcepacks/lavendre_core_module_<id>       one pack per module (Developer Mode)
+ *   - lavendre_modules.json                         index the mod reads at startup
+ * including pack.mcmeta and pack.png, so you never write those by hand.
+ */
+
+// BEGIN GENERATOR
+def copyTree = { File from, File to, boolean warnOnOverwrite ->
+    if (!from.isDirectory()) return
+    from.eachFileRecurse { File f ->
+        String rel = from.toPath().relativize(f.toPath()).toString()
+        File target = new File(to, rel)
+        if (f.isDirectory()) {
+            target.mkdirs()
+        } else {
+            target.parentFile.mkdirs()
+            if (warnOnOverwrite && target.exists()) {
+                println "Lavendre packs: WARNING, two modules ship the same file, later one wins: ${rel}"
+            }
+            target.bytes = f.bytes
+        }
+    }
+}
+
+def writeMcmeta = { File packDir, String description, int packFormat ->
+    packDir.mkdirs()
+    new File(packDir, 'pack.mcmeta').text = JsonOutput.prettyPrint(
+            JsonOutput.toJson([pack: [pack_format: packFormat, description: description]]))
+}
+
+def generatePacks = { File modulesDir, File outDir, int packFormat ->
+    outDir.deleteDir()
+    outDir.mkdirs()
+
+    File mergedDir = new File(outDir, 'resourcepacks/lavendre_core_data')
+    mergedDir.mkdirs()
+    File sharedIcon = new File(modulesDir, 'pack.png')
+    def index = []
+
+    def folders = (modulesDir.listFiles() ?: new File[0]).findAll { it.isDirectory() }.sort { it.name }
+    folders.each { File dir ->
+        String id = dir.name
+        if (!(id ==~ /[a-z0-9_]+/)) {
+            throw new GradleException("Module folder '${id}' must use only lowercase letters, digits and underscores.")
+        }
+        File dataDir = new File(dir, 'data')
+        if (!dataDir.isDirectory()) {
+            println "Lavendre packs: skipping '${id}' (no data folder)"
+            return
+        }
+
+        def meta = [:]
+        File metaFile = new File(dir, 'module.json')
+        if (metaFile.exists()) {
+            meta = new JsonSlurper().parse(metaFile)
+        }
+        String title = meta.name ?: id.split('_').collect { it.capitalize() }.join(' ')
+        String requiredMod = meta.mod ?: ''
+
+        // Per-module pack (Developer Mode)
+        File packDir = new File(outDir, "resourcepacks/lavendre_core_module_${id}")
+        copyTree(dataDir, new File(packDir, 'data'), false)
+        writeMcmeta(packDir, "Lavendre Core: ${title}", packFormat)
+        File icon = new File(dir, 'icon.png')
+        File chosenIcon = icon.exists() ? icon : (sharedIcon.exists() ? sharedIcon : null)
+        if (chosenIcon != null) {
+            new File(packDir, 'pack.png').bytes = chosenIcon.bytes
+        }
+
+        // Merged pack (normal mode)
+        copyTree(dataDir, new File(mergedDir, 'data'), true)
+
+        index << [id: id, name: title, mod: requiredMod]
+        println "Lavendre packs: module '${id}' -> \"Lavendre Core: ${title}\""
+    }
+
+    writeMcmeta(mergedDir, 'Lavendre Core data', packFormat)
+    if (sharedIcon.exists()) {
+        new File(mergedDir, 'pack.png').bytes = sharedIcon.bytes
+    }
+    new File(outDir, 'lavendre_modules.json').text = JsonOutput.prettyPrint(JsonOutput.toJson(index))
+    return index
+}
+// END GENERATOR
+
+def modulesDir = file('src/modules')
+def generatedDir = layout.buildDirectory.dir('generated/lavendre-packs').get().asFile
+
+tasks.register('generateLavendrePacks') {
+    group = 'lavendre'
+    description = 'Builds the merged and per-module Lavendre Core data packs from src/modules.'
+    if (modulesDir.exists()) {
+        inputs.dir(modulesDir)
+    }
+    outputs.dir(generatedDir)
+    doLast {
+        generatePacks(modulesDir, generatedDir, 48)
+    }
+}
+
+sourceSets.main.resources.srcDir(files(generatedDir) { builtBy 'generateLavendrePacks' })
+tasks.named('processResources') { dependsOn 'generateLavendrePacks' }
