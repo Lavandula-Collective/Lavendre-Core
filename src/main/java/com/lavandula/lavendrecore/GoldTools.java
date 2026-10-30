@@ -14,7 +14,7 @@ import java.util.List;
 
 /**
  * Golden pickaxe breaks everything in #lavendre_core:gold_instabreak instantly
- * (and drops it). Edit that tag to change what counts as "gold stuff".
+ * (and drops it). Edit tag to change what counts as "gold stuff".
  */
 public final class GoldTools {
     public static final TagKey<Block> GOLD_INSTABREAK =
@@ -36,8 +36,6 @@ public final class GoldTools {
                     }
 
                     List<ToolComponent.Rule> rules = new ArrayList<>();
-                    // Our rule goes FIRST. The first matching rule wins, and the vanilla
-                    // "incorrect tool" rule would otherwise block gold from dropping.
                     rules.add(ToolComponent.Rule.ofAlwaysDropping(GOLD_INSTABREAK, INSTANT_SPEED));
                     rules.addAll(original.rules());
 
