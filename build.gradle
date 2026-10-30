@@ -15,6 +15,8 @@ repositories {
     maven { url = "https://api.modrinth.com/maven" }
     maven { url = "https://raw.githubusercontent.com/Let-s-Do-Collection/Foundation/1.21.1/maven" }
     maven { url = "https://maven.architectury.dev/" }
+    maven { url = "https://maven.shedaniel.me/" }
+    maven { url = "https://maven.terraformersmc.com/releases/" }
     mavenCentral()
 }
 
@@ -43,7 +45,19 @@ dependencies {
     modRuntimeOnly "net.jodah:typetools:0.6.3" // Typetools
     modRuntimeOnly "com.electronwill.night-config:core:3.8.3" // NC: Core
     modRuntimeOnly "com.electronwill.night-config:toml:3.8.3" // NC: TOML
+
+    modCompileOnly("me.shedaniel.cloth:cloth-config-fabric:${project.cloth_config_version}") {
+        exclude(group: "net.fabricmc.fabric-api")
+    }
+    modCompileOnly "com.terraformersmc:modmenu:${project.modmenu_version}"
+
+    modLocalRuntime("me.shedaniel.cloth:cloth-config-fabric:${project.cloth_config_version}") {
+        exclude(group: "net.fabricmc.fabric-api")
+    }
+    modLocalRuntime "com.terraformersmc:modmenu:${project.modmenu_version}"
 }
+
+apply from: 'gradle/lavendre-packs.gradle'
 
 processResources {
     inputs.property "version", project.version
