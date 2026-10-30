@@ -33,5 +33,9 @@ public class LavendreCore implements ModInitializer {
             String version = container.getMetadata().getVersion().getFriendlyString();
             LOGGER.info("Lavendre Core v{} loaded.", version);
         });
+
+        // Progression tweaks
+        GoldTools.register();
+        GoldArmorSpeed.register();
     }
 }
