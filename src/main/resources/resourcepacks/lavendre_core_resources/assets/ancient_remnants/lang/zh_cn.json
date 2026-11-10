@@ -1,0 +1,23 @@
+{
+  "title.ancient_remnants.blessing_acquired": "月光祝福",
+  "item.ancient_remnants.monolith_codex": "月之典籍",
+  "item.ancient_remnants.research_scrap": "月之残片",
+  "effect.ancient_remnants.hunter_instincts": "虹彩凝视",
+  "effect.ancient_remnants.warrior_wrath": "永恒之力",
+  "effect.ancient_remnants.sentinel_aegis": "霜月庇护",
+  "effect.ancient_remnants.desperate_vitality": "月之慈悲",
+  "effect.ancient_remnants.architect_reach": "月铸之臂",
+  "effect.ancient_remnants.bountiful_harvest": "银色丰收",
+  "structure.ancient_remnants.hunter_monolith": "虹彩巨碑",
+  "structure.ancient_remnants.warrior_monolith": "永恒巨碑",
+  "structure.ancient_remnants.sentinel_monolith": "霜月巨碑",
+  "structure.ancient_remnants.cherry_monument": "月绽纪念碑",
+  "structure.ancient_remnants.oakwood_monument": "丰收月纪念碑",
+  "structure.ancient_remnants.coniferous_monument": "月铸纪念碑",
+  "research.ancient_remnants.hunter_monolith": "一座沐浴在虹彩之月变幻光芒中的巨碑。有人低语，它属于三者中最年幼的Sonnet。曾立于其下的猎人获得敏锐的感官与稳健的准头，足以在最深的黑夜中追踪猎物。",
+  "research.ancient_remnants.warrior_monolith": "永恒之月的巨碑，三轮明月中最大的一轮。褪色的传说称Aria为其守护者，她的引力曾托起潮汐。曾在此跪拜的战士获得不屈的力量。这股力量是沉重的责任，执掌它的人必须承担其重量。",
+  "research.ancient_remnants.sentinel_monolith": "霜月的巨碑，据说一个名字Canon仍在寒风中回荡。它苍白的光芒赋予坚韧与宁静。当月亮远离世界时，它会泛起蓝光，幸运眷顾在此栖身者。",
+  "research.ancient_remnants.cherry_monument": "传说三位姐妹乘着银色车驾穿越夜空，月光所及之处樱花盛开。如今花朵仍只在月光下绽放，仿佛在等待她们。纪念碑的光辉能治愈身与心。",
+  "research.ancient_remnants.oakwood_monument": "森林居民曾以永恒之月来计算季节，感受它对大地与潮汐的轻柔牵引。这座纪念碑承载着它的祝福，使土壤与牲畜更加丰饶，让匮乏的资源撑过漫漫长夜。",
+  "research.ancient_remnants.coniferous_monument": "针叶林与山地的居民用一种比记忆更古老的技艺塑造的石材建起了这座纪念碑，据说那种技艺曾将三轮明月从大地上托起。它赐予建造者建筑与采矿的技艺。其来历依然成谜。"
+}

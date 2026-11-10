@@ -1,0 +1,23 @@
+{
+  "title.ancient_remnants.blessing_acquired": "Благословение луны",
+  "item.ancient_remnants.monolith_codex": "Лунный кодекс",
+  "item.ancient_remnants.research_scrap": "Лунный обрывок",
+  "effect.ancient_remnants.hunter_instincts": "Радужный взор",
+  "effect.ancient_remnants.warrior_wrath": "Вечная мощь",
+  "effect.ancient_remnants.sentinel_aegis": "Эгида морозной луны",
+  "effect.ancient_remnants.desperate_vitality": "Лунная милость",
+  "effect.ancient_remnants.architect_reach": "Лунная досягаемость",
+  "effect.ancient_remnants.bountiful_harvest": "Серебряный урожай",
+  "structure.ancient_remnants.hunter_monolith": "Радужный монолит",
+  "structure.ancient_remnants.warrior_monolith": "Вечный монолит",
+  "structure.ancient_remnants.sentinel_monolith": "Морозный монолит",
+  "structure.ancient_remnants.cherry_monument": "Монумент лунного цветения",
+  "structure.ancient_remnants.oakwood_monument": "Монумент урожайной луны",
+  "structure.ancient_remnants.coniferous_monument": "Монумент лунной кузни",
+  "research.ancient_remnants.hunter_monolith": "Монолит, купающийся в вечно меняющемся свете Радужной луны. Поговаривают, что он принадлежит Sonnet, младшей из трёх. Охотники, стоявшие под ним, обретали острые чувства и твёрдую руку, чтобы выслеживать добычу в самые тёмные ночи.",
+  "research.ancient_remnants.warrior_monolith": "Монолит Вечной луны, величайшей из трёх. Угасшие предания называют Aria её хранительницей, чьё притяжение некогда поднимало приливы. Воины, преклонявшие здесь колени, обретали несгибаемую силу. Эта сила налагает тяжкий долг, и тот, кто ею владеет, должен нести её бремя.",
+  "research.ancient_remnants.sentinel_monolith": "Монолит Морозной луны, где в холодном ветре, как говорят, звучит имя Canon. Её бледный свет дарует стойкость и покой. Когда луна уходит далеко от мира, она светится синим, и удача благоволит тем, кто здесь укрывается.",
+  "research.ancient_remnants.cherry_monument": "Легенда гласит, что три сестры пересекали ночь в серебряной колеснице, и там, где падал их свет, расцветали вишни. Даже теперь цветы раскрываются только при лунном свете, словно ждут их. Свечение монумента исцеляет тело и дух.",
+  "research.ancient_remnants.oakwood_monument": "Лесные народы когда-то отсчитывали времена года по Вечной луне и её мягкой власти над землёй и приливами. Этот монумент хранит её благословение: почва и скот становятся плодороднее, а скудных запасов хватает до рассвета.",
+  "research.ancient_remnants.coniferous_monument": "Жители тайги и гор возвели этот монумент из камня, обработанного искусством древнее памяти, которое, как говорят, подняло три луны с земли. Оно одарило строителей мастерством в зодчестве и горном деле. Его происхождение остаётся тайной."
+}
