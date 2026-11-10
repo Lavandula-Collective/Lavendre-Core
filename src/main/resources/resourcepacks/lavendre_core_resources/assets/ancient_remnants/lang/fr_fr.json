@@ -1,0 +1,23 @@
+{
+  "title.ancient_remnants.blessing_acquired": "Bénédiction lunaire",
+  "item.ancient_remnants.monolith_codex": "Codex lunaire",
+  "item.ancient_remnants.research_scrap": "Fragment lunaire",
+  "effect.ancient_remnants.hunter_instincts": "Regard irisé",
+  "effect.ancient_remnants.warrior_wrath": "Puissance éternelle",
+  "effect.ancient_remnants.sentinel_aegis": "Égide de givre",
+  "effect.ancient_remnants.desperate_vitality": "Grâce lunaire",
+  "effect.ancient_remnants.architect_reach": "Portée forgée par la lune",
+  "effect.ancient_remnants.bountiful_harvest": "Moisson d'argent",
+  "structure.ancient_remnants.hunter_monolith": "Monolithe irisé",
+  "structure.ancient_remnants.warrior_monolith": "Monolithe éternel",
+  "structure.ancient_remnants.sentinel_monolith": "Monolithe de givre",
+  "structure.ancient_remnants.cherry_monument": "Monument de la floraison lunaire",
+  "structure.ancient_remnants.oakwood_monument": "Monument de la lune des moissons",
+  "structure.ancient_remnants.coniferous_monument": "Monument de la forge lunaire",
+  "research.ancient_remnants.hunter_monolith": "Un monolithe baigné par la lumière changeante de la Lune irisée. Certains murmurent qu'il appartient à Sonnet, la plus jeune des trois. Les chasseurs qui s'y tenaient gagnaient des sens aiguisés et une visée sûre, de quoi traquer leur proie dans les nuits les plus sombres.",
+  "research.ancient_remnants.warrior_monolith": "Le monolithe de la Lune éternelle, la plus grande des trois. D'anciens récits nomment Aria sa gardienne, dont l'attraction souleva les marées. Les guerriers qui s'y agenouillaient trouvaient une force inflexible. Ce pouvoir est un lourd devoir, et qui le porte en supporte le poids.",
+  "research.ancient_remnants.sentinel_monolith": "Le monolithe de la Lune de givre, où un nom, Canon, flotterait dans le vent froid. Sa pâle lueur confère endurance et calme. Quand la lune s'éloigne du monde, elle brille d'un éclat bleu, et la fortune sourit à ceux qui s'abritent ici.",
+  "research.ancient_remnants.cherry_monument": "La légende dit que trois sœurs traversaient la nuit en char d'argent, et que des cerisiers fleurissaient où tombait leur lumière. Aujourd'hui encore, leurs fleurs ne s'ouvrent qu'au clair de lune, comme pour les attendre. L'éclat du monument soigne corps et esprit.",
+  "research.ancient_remnants.oakwood_monument": "Les peuples des forêts comptaient jadis leurs saisons d'après la Lune éternelle et sa douce emprise sur la terre et les marées. Ce monument porte sa bénédiction : sols et bétail deviennent plus fertiles, et les maigres vivres durent jusqu'à l'aube.",
+  "research.ancient_remnants.coniferous_monument": "Les peuples de la taïga et des montagnes dressèrent ce monument dans une pierre façonnée par un art plus ancien que la mémoire, dit-on capable d'arracher les trois lunes à la terre. Il dota ses bâtisseurs de savoir en architecture et en minage. Ses origines restent un mystère."
+}

@@ -1,0 +1,23 @@
+{
+  "title.ancient_remnants.blessing_acquired": "Moonlight Blessing Acquired",
+  "item.ancient_remnants.monolith_codex": "Lunar Codex",
+  "item.ancient_remnants.research_scrap": "Lunar Scrap",
+  "effect.ancient_remnants.hunter_instincts": "Iridescent Gaze",
+  "effect.ancient_remnants.warrior_wrath": "Eternal Might",
+  "effect.ancient_remnants.sentinel_aegis": "Frostmoon Aegis",
+  "effect.ancient_remnants.desperate_vitality": "Lunar Mercy",
+  "effect.ancient_remnants.architect_reach": "Moonforged Reach",
+  "effect.ancient_remnants.bountiful_harvest": "Silver Harvest",
+  "structure.ancient_remnants.hunter_monolith": "Iridescent Monolith",
+  "structure.ancient_remnants.warrior_monolith": "Eternal Monolith",
+  "structure.ancient_remnants.sentinel_monolith": "Frost Monolith",
+  "structure.ancient_remnants.cherry_monument": "Moonbloom Monument",
+  "structure.ancient_remnants.oakwood_monument": "Harvest Moon Monument",
+  "structure.ancient_remnants.coniferous_monument": "Moonforge Monument",
+  "research.ancient_remnants.hunter_monolith": "A Monolith bathed in the Iridescent Moon's ever-shifting light. Some whisper it belongs to Sonnet, youngest of the three. Hunters who stood beneath it gained sharp senses and a steady aim, enough to track prey through the darkest nights.",
+  "research.ancient_remnants.warrior_monolith": "The Eternal Moon's Monolith, largest of the three. Faded tales name Aria as its keeper, whose pull once raised the tides. Warriors who knelt here found unyielding strength. Its power is a heavy duty, and those who wield it must bear the weight.",
+  "research.ancient_remnants.sentinel_monolith": "The Frost Moon's Monolith, where a name, Canon, is said to linger on the cold wind. Its pale light grants endurance and calm. When the moon drifts far from the world, it glows blue, and fortune favors those who shelter here.",
+  "research.ancient_remnants.cherry_monument": "Legend says three sisters crossed the night in a silver chariot, and cherry trees bloomed wherever their light fell. Even now the blossoms open only by moonlight, as if waiting for them. The Monument's glow heals both body and mind.",
+  "research.ancient_remnants.oakwood_monument": "Forest folk once counted their seasons by the Eternal Moon, and its gentle pull on land and tide. This Monument carries its blessing, making soil and livestock more fertile and stretching scarce resources through lean nights.",
+  "research.ancient_remnants.coniferous_monument": "Taiga and mountain folk raised this Monument from stone shaped by an art older than memory, said to have lifted the three moons from the earth. It blessed its builders with skill in architecture and mining. Its origins remain a mystery."
+}

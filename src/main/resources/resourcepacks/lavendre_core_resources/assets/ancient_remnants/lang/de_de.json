@@ -1,0 +1,23 @@
+{
+  "title.ancient_remnants.blessing_acquired": "Mondlichtsegen",
+  "item.ancient_remnants.monolith_codex": "Mondkodex",
+  "item.ancient_remnants.research_scrap": "Mondfragment",
+  "effect.ancient_remnants.hunter_instincts": "Schillernder Blick",
+  "effect.ancient_remnants.warrior_wrath": "Ewige Macht",
+  "effect.ancient_remnants.sentinel_aegis": "Frostmond-Aegis",
+  "effect.ancient_remnants.desperate_vitality": "Mondgnade",
+  "effect.ancient_remnants.architect_reach": "Mondgeschmiedete Reichweite",
+  "effect.ancient_remnants.bountiful_harvest": "Silberne Ernte",
+  "structure.ancient_remnants.hunter_monolith": "Schillernder Monolith",
+  "structure.ancient_remnants.warrior_monolith": "Ewiger Monolith",
+  "structure.ancient_remnants.sentinel_monolith": "Frost-Monolith",
+  "structure.ancient_remnants.cherry_monument": "Mondblüten-Monument",
+  "structure.ancient_remnants.oakwood_monument": "Erntemond-Monument",
+  "structure.ancient_remnants.coniferous_monument": "Mondschmiede-Monument",
+  "research.ancient_remnants.hunter_monolith": "Ein Monolith, getaucht in das ewig wechselnde Licht des Schillernden Mondes. Manche flüstern, er gehöre Sonnet, der Jüngsten der Drei. Jäger, die darunter standen, erlangten scharfe Sinne und eine ruhige Hand, genug, um Beute durch die dunkelsten Nächte zu verfolgen.",
+  "research.ancient_remnants.warrior_monolith": "Der Monolith des Ewigen Mondes, des größten der Drei. Verblasste Erzählungen nennen Aria als seine Hüterin, deren Sog einst die Gezeiten hob. Krieger, die hier knieten, fanden unbeugsame Stärke. Diese Macht ist eine schwere Pflicht, und wer sie führt, muss die Last tragen.",
+  "research.ancient_remnants.sentinel_monolith": "Der Monolith des Frostmondes, wo ein Name, Canon, im kalten Wind nachhallen soll. Sein bleiches Licht schenkt Ausdauer und Ruhe. Entfernt sich der Mond von der Welt, leuchtet er blau, und das Glück begünstigt jene, die hier Schutz suchen.",
+  "research.ancient_remnants.cherry_monument": "Der Legende nach durchquerten drei Schwestern die Nacht in einem silbernen Wagen, und wo ihr Licht fiel, blühten Kirschbäume. Noch heute öffnen sich die Blüten nur im Mondlicht, als warteten sie auf sie. Das Leuchten des Monuments heilt Körper und Geist.",
+  "research.ancient_remnants.oakwood_monument": "Waldvölker zählten ihre Jahreszeiten einst nach dem Ewigen Mond und seinem sanften Zug auf Land und Gezeiten. Dieses Monument trägt seinen Segen: Boden und Vieh werden fruchtbarer, und knappe Vorräte reichen durch magere Nächte.",
+  "research.ancient_remnants.coniferous_monument": "Taiga- und Bergvölker errichteten dieses Monument aus Stein, geformt von einer Kunst, älter als jede Erinnerung, die einst die drei Monde von der Erde gehoben haben soll. Es schenkte seinen Erbauern Geschick in Baukunst und Bergbau. Sein Ursprung bleibt ein Rätsel."
+}
