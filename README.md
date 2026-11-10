@@ -47,6 +47,7 @@ Issues and compatibility fixes will only be addressed when they affect the modpa
 - Adds custom AFK music for [Ji AFK Cinematic](https://modrinth.com/mod/ji-afk-cinematic)
 - Enables the existing 3D lantern models from [Mizuno's 16 Craft](https://mizunomcmemo.blogspot.com/) to display correctly in the inventory and when held in the player's hand.
 - Adds new banners for [Modern World Creation](https://modrinth.com/mod/modern-world-creation).
+- Adds custom lore for [Ancient Remnants: Monoliths](https://modrinth.com/mod/ancient-remnants)
 
 # 📦 Datapack
 
