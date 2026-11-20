@@ -1,0 +1,12 @@
+{
+  "type": "kaleidoscope_cookery:bamboo_tray",
+  "duration": 1800,
+  "ingredient": {
+    "item": "herbalbrews:green_tea_leaf"
+  },
+  "result": {
+    "count": 1,
+    "id": "herbalbrews:dried_green_tea"
+  },
+  "subtype": "drying"
+}
