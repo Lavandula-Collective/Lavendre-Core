@@ -1,0 +1,26 @@
+{
+  "replace": true,
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    {
+      "item": "minecraft:echo_shard"
+    },
+    {
+      "item": "tide:lunar_calendar"
+    },
+    {
+      "item": "tide:depth_meter"
+    },
+    {
+      "item": "tide:climate_gauge"
+    },
+    {
+      "item": "tide:weather_radio"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "tide:fish_finder"
+  }
+}
