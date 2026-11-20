@@ -39,6 +39,8 @@ dependencies {
     modRuntimeOnly "maven.modrinth:ugCWUHV9:JjBuHb3J" // Enhanced Celestials 2: Core
     modRuntimeOnly "maven.modrinth:ziOp6EO8:srVXMYcH" // CorgiLib
     modRuntimeOnly "maven.modrinth:z2XEADmE:puBUxsNk" // Data Anchor
+    modCompileOnly "maven.modrinth:ugCWUHV9:JjBuHb3J"
+    modCompileOnly "maven.modrinth:z2XEADmE:puBUxsNk"
     modRuntimeOnly "dev.architectury:architectury-fabric:13.0.8" // Architectury
     modRuntimeOnly "maven.modrinth:9s6osm5g:HpMb5wGb" // Cloth Config
     modRuntimeOnly "net.satisfy.foundation:foundation-fabric:1.0.7" // Foundation
