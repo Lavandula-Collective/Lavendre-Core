@@ -1,0 +1,12 @@
+{
+  "criteria": {
+    "witnessed": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    [
+      "witnessed"
+    ]
+  ]
+}
