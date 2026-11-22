@@ -38,7 +38,7 @@ abstract class PlayerScreenHandlerMixin extends ScreenHandler implements ToolSlo
         if (lavendre$toolSlotSlots.isEmpty()) {
             ToolSlotInventory toolSlots = ToolSlotInventory.of(owner.getInventory());
             for (ToolType type : ToolType.values()) {
-                DedicatedToolSlot slot = new DedicatedToolSlot(toolSlots, type);
+                DedicatedToolSlot slot = new DedicatedToolSlot(toolSlots, type, owner);
                 addSlot(slot);
                 lavendre$toolSlotSlots.add(slot);
             }

@@ -4,10 +4,13 @@ import com.lavandula.lavendrecore.client.ToolSlotRenderer;
 import com.lavandula.lavendrecore.toolslot.ToolSlotScreenHandler;
 import com.lavandula.lavendrecore.toolslot.DedicatedToolSlot;
 import com.lavandula.lavendrecore.toolslot.ToolSlotInventory;
+import com.llamalad7.mixinextras.injector.v2.WrapWithCondition;
 import net.minecraft.client.gui.DrawContext;
 import net.minecraft.client.gui.screen.ingame.CreativeInventoryScreen;
 import net.minecraft.client.gui.screen.ingame.HandledScreen;
+import net.minecraft.client.network.ClientPlayerInteractionManager;
 import net.minecraft.entity.player.PlayerInventory;
+import net.minecraft.item.ItemStack;
 import net.minecraft.screen.ScreenHandler;
 import net.minecraft.screen.slot.Slot;
 import net.minecraft.text.Text;
@@ -34,10 +37,20 @@ abstract class CreativeInventoryScreenMixin extends HandledScreen<ScreenHandler>
 
     @Inject(method = "drawBackground", at = @At("TAIL"))
     private void lavendre$drawToolSlotBackground(DrawContext context, float delta, int mouseX, int mouseY, CallbackInfo ci) {
-        if (isInventoryTabSelected() && !ToolSlotScreenHandler.of(client.player).lavendre$getDedicatedToolSlots().isEmpty()) {
+        if (isInventoryTabSelected() && ToolSlotRenderer.hasVisibleSlots(
+                ToolSlotScreenHandler.of(client.player).lavendre$getDedicatedToolSlots())) {
             ToolSlotRenderer.drawInventory(context, ToolSlotInventory.of(client.player.getInventory()),
                     x + ToolSlotRenderer.inventoryFirstX(backgroundWidth), y + ToolSlotRenderer.inventoryY(TOOL_ROW_Y));
         }
+    }
+
+    @WrapWithCondition(method = "onMouseClick", at = @At(value = "INVOKE",
+            target = "Lnet/minecraft/client/network/ClientPlayerInteractionManager;clickCreativeStack(Lnet/minecraft/item/ItemStack;I)V"))
+    private boolean lavendre$skipHiddenSlotsWhenClearingInventory(ClientPlayerInteractionManager interactionManager,
+                                                                  ItemStack stack, int slotId) {
+        // The Creative trash slot sends a clear packet for every player slot, including hidden slots.
+        DedicatedToolSlot slot = DedicatedToolSlot.at(client.player.playerScreenHandler, slotId);
+        return slot == null || slot.isEnabled();
     }
 
     @ModifyArgs(method = "setSelectedTab", at = @At(value = "INVOKE",

@@ -103,7 +103,8 @@ public final class LavendreConfig {
                 integer(tool, "indicatorX", defaults.indicatorX()), integer(tool, "indicatorY", defaults.indicatorY()),
                 integer(tool, "inventoryX", defaults.inventoryX()), integer(tool, "inventoryY", defaults.inventoryY()),
                 anchor, integer(tool, "indicatorHoldMs", defaults.indicatorHoldMs()), bool(tool, "fade", defaults.fade()),
-                bool(tool, "invertRightClick", defaults.invertRightClick()));
+                bool(tool, "invertRightClick", defaults.invertRightClick()),
+                bool(tool, "hideInCreative", defaults.hideInCreative()));
     }
 
     public static void write(Values values) {

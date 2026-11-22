@@ -30,7 +30,8 @@ abstract class InventoryScreenMixin extends AbstractInventoryScreen<PlayerScreen
 
     @Inject(method = "drawBackground", at = @At("TAIL"))
     private void lavendre$drawToolSlotBackground(DrawContext context, float delta, int mouseX, int mouseY, CallbackInfo ci) {
-        if ((!narrow || !recipeBook.isOpen()) && !ToolSlotScreenHandler.of(client.player).lavendre$getDedicatedToolSlots().isEmpty()) {
+        if ((!narrow || !recipeBook.isOpen()) && ToolSlotRenderer.hasVisibleSlots(
+                ((ToolSlotScreenHandler) handler).lavendre$getDedicatedToolSlots())) {
             ToolSlotRenderer.drawInventory(context, ToolSlotInventory.of(client.player.getInventory()),
                     x + ToolSlotRenderer.inventoryFirstX(backgroundWidth), y + ToolSlotRenderer.inventoryY(DedicatedToolSlot.Y));
         }

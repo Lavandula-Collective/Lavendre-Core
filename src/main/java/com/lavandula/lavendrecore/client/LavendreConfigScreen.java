@@ -120,6 +120,10 @@ public final class LavendreConfigScreen {
                 -ToolSlotSettings.MAX_OFFSET, ToolSlotSettings.MAX_OFFSET, "GUI pixels from the anchor. Positive values move right.");
         var inventoryY = addNumber(category, entries, "Inventory row vertical offset", saved.inventoryY(), defaults.inventoryY(),
                 -ToolSlotSettings.MAX_OFFSET, ToolSlotSettings.MAX_OFFSET, "GUI pixels from the default row. Positive values move down.");
+        var hideInCreative = entries.startBooleanToggle(Text.literal("Hide Tool Slots in Creative"), saved.hideInCreative())
+                .setDefaultValue(defaults.hideInCreative())
+                .setTooltip(Text.literal("Hides the dedicated tool slots in Creative mode on this client.")).build();
+        category.addEntry(hideInCreative);
         var hold = addNumber(category, entries, "Delay before hiding (ms)", saved.indicatorHoldMs(), defaults.indicatorHoldMs(),
                 0, ToolSlotSettings.MAX_HOLD_MS, "How long the indicator stays after the active tool is put away.");
         var fade = entries.startBooleanToggle(Text.literal("Fade animation"), saved.fade())
@@ -130,8 +134,8 @@ public final class LavendreConfigScreen {
                 .setTooltip(Text.literal("Default: shovel when standing and hoe when sneaking."),
                         Text.literal("Inverted: hoe when standing and shovel when sneaking.")).build();
         category.addEntry(invert);
-        return () -> new ToolSlotSettings(indicatorX.getValue(), indicatorY.getValue(),
-                inventoryX.getValue(), inventoryY.getValue(), anchor.getValue(), hold.getValue(), fade.getValue(), invert.getValue());
+        return () -> new ToolSlotSettings(indicatorX.getValue(), indicatorY.getValue(), inventoryX.getValue(),
+                inventoryY.getValue(), anchor.getValue(), hold.getValue(), fade.getValue(), invert.getValue(), hideInCreative.getValue());
     }
 
     private static IntegerListEntry addNumber(ConfigCategory category, ConfigEntryBuilder entries, String label,

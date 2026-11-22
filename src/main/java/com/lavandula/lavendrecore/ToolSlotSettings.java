@@ -1,7 +1,8 @@
 package com.lavandula.lavendrecore;
 
 public record ToolSlotSettings(int indicatorX, int indicatorY, int inventoryX, int inventoryY,
-                               Anchor inventoryAnchor, int indicatorHoldMs, boolean fade, boolean invertRightClick) {
+                               Anchor inventoryAnchor, int indicatorHoldMs, boolean fade, boolean invertRightClick,
+                               boolean hideInCreative) {
     public static final int MAX_OFFSET = 4096;
     public static final int MAX_HOLD_MS = 60000;
 
@@ -17,7 +18,7 @@ public record ToolSlotSettings(int indicatorX, int indicatorY, int inventoryX, i
     }
 
     public static ToolSlotSettings defaults() {
-        return new ToolSlotSettings(0, 0, 0, 0, Anchor.CENTER, 260, true, false);
+        return new ToolSlotSettings(0, 0, 0, 0, Anchor.CENTER, 260, true, false, true);
     }
 
     public enum Anchor {

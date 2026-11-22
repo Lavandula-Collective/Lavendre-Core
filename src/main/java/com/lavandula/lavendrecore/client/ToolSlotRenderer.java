@@ -43,6 +43,10 @@ public final class ToolSlotRenderer {
         return defaultY + LavendreConfig.clientToolSlot().inventoryY();
     }
 
+    public static boolean hasVisibleSlots(List<DedicatedToolSlot> slots) {
+        return !slots.isEmpty() && slots.getFirst().isEnabled();
+    }
+
     public static void drawInventory(DrawContext context, ToolSlotInventory inventory, int firstX, int y) {
         RenderSystem.enableBlend();
         context.drawGuiTexture(INVENTORY, firstX - ROW_INSET, y - ROW_INSET, ROW_WIDTH, ROW_HEIGHT);
@@ -59,7 +63,7 @@ public final class ToolSlotRenderer {
     public static boolean isWithinInventoryRow(double x, double y, int firstX, int slotY, List<DedicatedToolSlot> slots) {
         int left = firstX - ROW_INSET;
         int top = slotY - ROW_INSET;
-        return !slots.isEmpty() && x >= left && x < left + ROW_WIDTH && y >= top && y < top + ROW_HEIGHT;
+        return hasVisibleSlots(slots) && x >= left && x < left + ROW_WIDTH && y >= top && y < top + ROW_HEIGHT;
     }
 
     static void drawIndicator(DrawContext context, MinecraftClient client, PlayerEntity player, ItemStack tool, int x, int y) {
