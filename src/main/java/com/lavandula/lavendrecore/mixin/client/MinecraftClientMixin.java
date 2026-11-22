@@ -1,6 +1,8 @@
 package com.lavandula.lavendrecore.mixin.client;
 
+import com.lavandula.lavendrecore.client.BetterCombatClientCompat;
 import com.lavandula.lavendrecore.toolslot.ToolSlotUse;
+import com.llamalad7.mixinextras.injector.wrapmethod.WrapMethod;
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
 import net.minecraft.client.MinecraftClient;
@@ -12,6 +14,16 @@ import org.spongepowered.asm.mixin.injection.At;
 
 @Mixin(MinecraftClient.class)
 abstract class MinecraftClientMixin {
+    @WrapMethod(method = "doAttack")
+    private boolean lavendre$selectCombatHand(Operation<Boolean> original) {
+        return BetterCombatClientCompat.withAttackHand((MinecraftClient) (Object) this, original::call);
+    }
+
+    @WrapMethod(method = "handleBlockBreaking")
+    private void lavendre$selectHeldAttackHand(boolean breaking, Operation<Void> original) {
+        BetterCombatClientCompat.withAttackHand((MinecraftClient) (Object) this, () -> original.call(breaking));
+    }
+
     @WrapOperation(method = "doItemUse", at = @At(value = "INVOKE",
             target = "Lnet/minecraft/client/network/ClientPlayerEntity;getStackInHand(Lnet/minecraft/util/Hand;)Lnet/minecraft/item/ItemStack;"))
     private ItemStack lavendre$selectPhysicalItemForUse(ClientPlayerEntity player, Hand hand, Operation<ItemStack> original) {

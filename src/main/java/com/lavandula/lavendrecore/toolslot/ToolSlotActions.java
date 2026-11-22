@@ -1,5 +1,6 @@
 package com.lavandula.lavendrecore.toolslot;
 
+import com.lavandula.lavendrecore.compat.BetterCombatCompat;
 import net.minecraft.advancement.criterion.Criteria;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
@@ -25,7 +26,8 @@ public final class ToolSlotActions {
     }
 
     public static boolean isWeapon(ItemStack stack) {
-        return ToolType.SWORD.accepts(stack) || ToolType.AXE.accepts(stack) || stack.isOf(Items.TRIDENT) || stack.isOf(Items.MACE);
+        return ToolType.SWORD.accepts(stack) || ToolType.AXE.accepts(stack) || stack.isOf(Items.TRIDENT)
+                || stack.isOf(Items.MACE) || BetterCombatCompat.hasAttacks(stack);
     }
 
     public static ItemStack readySword(PlayerEntity player) {

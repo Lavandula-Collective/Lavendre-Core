@@ -9,7 +9,9 @@
     "PlayerScreenHandlerMixin",
     "ServerPlayNetworkHandlerMixin",
     "ServerPlayerEntityMixin",
-    "ServerPlayerInteractionManagerMixin"
+    "ServerPlayerInteractionManagerMixin",
+    "compat.BetterCombatPlayerAttackHelperMixin",
+    "compat.BetterCombatServerNetworkMixin"
   ],
   "client": [
     "client.ClientPlayNetworkHandlerMixin",

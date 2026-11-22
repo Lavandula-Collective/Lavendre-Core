@@ -2,6 +2,7 @@ package com.lavandula.lavendrecore.mixin.client;
 
 import com.lavandula.lavendrecore.LavendreConfig;
 import com.lavandula.lavendrecore.client.ActiveToolSlot;
+import com.lavandula.lavendrecore.client.BetterCombatClientCompat;
 import com.lavandula.lavendrecore.toolslot.ToolSlotActions;
 import com.lavandula.lavendrecore.toolslot.ToolSlotHandState;
 import com.lavandula.lavendrecore.toolslot.ToolSlotMining;
@@ -24,6 +25,7 @@ import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.hit.EntityHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
+import org.jetbrains.annotations.Nullable;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
@@ -34,7 +36,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(ClientPlayerInteractionManager.class)
-abstract class ClientPlayerInteractionManagerMixin implements ActiveToolSlot {
+abstract class ClientPlayerInteractionManagerMixin implements ActiveToolSlot.CombatHand {
     @Shadow @Final private MinecraftClient client;
     @Shadow private boolean breakingBlock;
     @Shadow private BlockPos currentBreakingPos;
@@ -144,12 +146,19 @@ abstract class ClientPlayerInteractionManagerMixin implements ActiveToolSlot {
     }
 
     @Override
+    public void lavendre$recordCombatHand(PlayerEntity player, @Nullable DedicatedToolSlot slot) {
+        syncSelectedSlot();
+        lavendre$hand.recordUse(player, slot);
+    }
+
+    @Override
     public ItemStack lavendre$getActiveToolSlot() {
         ClientPlayerEntity player = client.player;
         if (player == null || client.world == null || client.currentScreen != null) {
             return ItemStack.EMPTY;
         }
         var handler = ToolSlotScreenHandler.of(player);
-        return lavendre$hand.displayedStack(player, ToolSlotUse.isAvailable(player), breakingBlock, handler.lavendre$isPvpSwordReady());
+        boolean usingTool = breakingBlock || BetterCombatClientCompat.isSwingInProgress(client);
+        return lavendre$hand.displayedStack(player, ToolSlotUse.isAvailable(player), usingTool, handler.lavendre$isPvpSwordReady());
     }
 }

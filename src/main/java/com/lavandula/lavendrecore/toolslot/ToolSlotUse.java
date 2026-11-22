@@ -52,14 +52,16 @@ public final class ToolSlotUse {
         return scope != null && scope.inventory() == inventory;
     }
 
+    public static boolean isSwordScoped(PlayerEntity player) {
+        DedicatedToolSlot slot = activeSlot(player.getInventory());
+        return slot != null && slot.type() == ToolType.SWORD;
+    }
+
     public static <T> T withTool(PlayerEntity player, @Nullable DedicatedToolSlot slot, Supplier<T> action) {
         // An explicit empty scope selects the physical hotbar hand for this interaction.
         PlayerInventory inventory = player.getInventory();
         HandScope previous = HAND_SCOPE.get();
         if (previous != null && previous.inventory() == inventory && previous.slot() == slot) {
-            return action.get();
-        }
-        if (previous == null && slot == null && !player.getWorld().isClient()) {
             return action.get();
         }
         HAND_SCOPE.set(new HandScope(inventory, slot));
