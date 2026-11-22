@@ -1,8 +1,11 @@
 package com.lavandula.lavendrecore.client;
 
+import com.lavandula.lavendrecore.toolslot.DedicatedToolSlot;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
+import org.jetbrains.annotations.Nullable;
 
 public interface ActiveToolSlot {
     static ItemStack get(MinecraftClient client) {
@@ -10,6 +13,10 @@ public interface ActiveToolSlot {
     }
 
     ItemStack lavendre$getActiveToolSlot();
+
+    interface CombatHand extends ActiveToolSlot {
+        void lavendre$recordCombatHand(PlayerEntity player, @Nullable DedicatedToolSlot slot);
+    }
 
     static ItemStack renderMainHand(LivingEntity entity, ItemStack hotbarStack) {
         MinecraftClient client = MinecraftClient.getInstance();
