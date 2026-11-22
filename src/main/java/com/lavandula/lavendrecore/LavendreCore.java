@@ -4,7 +4,15 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
+import com.lavandula.lavendrecore.toolslot.EnableToolSlotPayload;
+import com.lavandula.lavendrecore.toolslot.ServerToolSlotHand;
+import com.lavandula.lavendrecore.toolslot.ToolSlotHandPayload;
+import com.lavandula.lavendrecore.toolslot.ToolSlotPreferencePayload;
 import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.networking.v1.PayloadTypeRegistry;
+import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;
+import net.fabricmc.fabric.api.networking.v1.EntityTrackingEvents;
+import net.minecraft.server.network.ServerPlayerEntity;
 import net.fabricmc.fabric.api.resource.ResourceManagerHelper;
 import net.fabricmc.fabric.api.resource.ResourcePackActivationType;
 import net.fabricmc.loader.api.FabricLoader;
@@ -37,6 +45,17 @@ public class LavendreCore implements ModInitializer {
 
     @Override
     public void onInitialize() {
+        PayloadTypeRegistry.playS2C().register(EnableToolSlotPayload.ID, EnableToolSlotPayload.CODEC);
+        PayloadTypeRegistry.playS2C().register(ToolSlotHandPayload.ID, ToolSlotHandPayload.CODEC);
+        EntityTrackingEvents.START_TRACKING.register((entity, observer) -> {
+            if (entity instanceof ServerPlayerEntity player) {
+                ServerToolSlotHand.of(player).startTracking(observer);
+            }
+        });
+        PayloadTypeRegistry.playC2S().register(ToolSlotPreferencePayload.ID, ToolSlotPreferencePayload.CODEC);
+        ServerPlayNetworking.registerGlobalReceiver(ToolSlotPreferencePayload.ID, (payload, context) ->
+                ToolSlotPreferencePayload.Connection.of(context.player().networkHandler)
+                        .lavendre$setInvertRightClick(payload.invertRightClick()));
         LavendreConfig.load();
         LavendreConfig.Values config = LavendreConfig.session();
         boolean developerMode = config.developerMode();
