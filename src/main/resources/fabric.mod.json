@@ -13,6 +13,7 @@
   },
   "license": "All Rights Reserved",
   "environment": "*",
+  "mixins": ["lavendre_core.mixins.json"],
   "entrypoints": {
     "main": [
       "com.lavandula.lavendrecore.LavendreCore",
