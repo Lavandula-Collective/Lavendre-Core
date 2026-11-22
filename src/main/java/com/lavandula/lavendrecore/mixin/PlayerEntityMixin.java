@@ -31,6 +31,10 @@ abstract class PlayerEntityMixin {
     @WrapMethod(method = "attack")
     private void lavendre$attackWithSword(Entity target, Operation<Void> original) {
         PlayerEntity player = (PlayerEntity) (Object) this;
+        if (ToolSlotUse.isSwordScoped(player)) {
+            original.call(target);
+            return;
+        }
         DedicatedToolSlot slot = ToolSlotActions.swordForAttack(player, target);
         if (player instanceof ServerPlayerEntity serverPlayer && target.isAttackable()) {
             ServerToolSlotHand.of(serverPlayer).equip(serverPlayer, slot);
