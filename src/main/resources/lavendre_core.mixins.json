@@ -22,6 +22,8 @@
     "client.HeldItemRendererMixin",
     "client.InGameHudMixin",
     "client.InventoryScreenMixin",
+    "client.ItemGroupMixin",
+    "client.ItemGroupsMixin",
     "client.MinecraftClientMixin",
     "client.OtherClientPlayerEntityMixin",
     "client.PlayerHandEquipmentMixin",
