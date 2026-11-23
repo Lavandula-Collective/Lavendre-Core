@@ -25,6 +25,13 @@ Issues and compatibility fixes will only be addressed when they affect the modpa
 - **Gold Tools:** Gold tools can now instantly break gold-related blocks, including gold blocks and other gold-based blocks.
 - **Gold Armor:** Each equipped gold armor piece grants a 10% movement speed bonus, stacking up to 40% when wearing the full set.
 
+### Tool Slot
+
+- Adds five dedicated inventory slots for a pickaxe, axe, shovel, sword, and hoe, with shift-click transfers.
+- Automatically uses the right stored tool for breaking blocks and supports right-click actions like stripping logs, making paths, and tilling soil.
+- Automatically uses the stored sword when attacking without a weapon. Supports Better Combat and can ready the sword while PvP Flag is active.
+- Shows the active tool next to the hotbar, supports Punchy animations, and lets you show the slots in Creative mode.
+
 # 🎨 Resources
 
 ### Mizuno's 16 Craft
@@ -42,7 +49,8 @@ Issues and compatibility fixes will only be addressed when they affect the modpa
   - [Polymorph](https://modrinth.com/mod/polymorph)
   - [Reliable EMI (REMI)](https://modrinth.com/mod/reliable-emi)
   - [Trinkets](https://modrinth.com/mod/trinkets)
-- Adds and modifies language entries in selected packs for Lavendre.
+- Adds and modifies language entries in selected packs for Lavendre, including Kaleidoscope Cookery item names and tooltips.
+- Adds Mizuno's 16 Craft textures for the Tool Slot inventory row and hotbar indicator.
 - Adds custom GUI textures for [Questlog](https://modrinth.com/mod/questlog)
 - Adds custom AFK music for [Ji AFK Cinematic](https://modrinth.com/mod/ji-afk-cinematic)
 - Enables the existing 3D lantern models from [Mizuno's 16 Craft](https://mizunomcmemo.blogspot.com/) to display correctly in the inventory and when held in the player's hand.
@@ -59,6 +67,14 @@ Issues and compatibility fixes will only be addressed when they affect the modpa
 - Prioritizes Farmer's Delight items over their Let's Do counterparts to prevent duplicate items and recipes.
 - Adjusts wild crop generation to use Farm & Charm's equivalent crops while retaining the corresponding Farmer's Delight drops.
 
+### **[Kaleidoscope Cookery](https://modrinth.com/mod/kaleidoscope-cookery)**
+- Adds Farmer's Delight cutting board recipes for sashimi, cow offal, and pork belly.
+- Adds a stockpot recipe for tea eggs and lets the bamboo tray dry Herbal Brews tea.
+- Gives mature Farm & Charm lettuce a chance to drop a caterpillar.
+
+### **[Let's Do: Bakery](https://modrinth.com/mod/lets-do-bakery-farmcharm-compat)**
+- Adds Farmer's Delight cooking pot recipes for apple, chocolate, glow berry, strawberry, and sweet berry jam.
+
 ### **[Let's Do: Hearth & Timber](https://modrinth.com/mod/lets-do-hearth-timber)**
 - Disables the world generation of groutless rubblestone to prevent unwanted terrain generation.
 
@@ -68,6 +84,14 @@ Issues and compatibility fixes will only be addressed when they affect the modpa
 - Aligns Herbal Brews coffee-mixing recipes with Rustic Delight's manual mixing logic for a consistent preparation experience.
 - Replaces Herbal Brews' wild coffee generation with Rustic Delight's wild coffee plant to avoid redundant world-generation content.
 - Adds `#minecraft:flower` tag to Herbal Brews plants.
+- Lets Farm & Charm's silo dry green, oolong, and black tea.
+
+### **[Let's Do: Lili's Pottery](https://modrinth.com/mod/lets-do-lilis-pottery)**
+- Adds pottery table recipes for Handcrafted terracotta bowls, cups, plates, and pots.
+
+### **[Tide](https://modrinth.com/mod/tide)**
+- Makes fishing rod upgrades follow a smithing progression from stone through iron, gold, crystal, and diamond.
+- Updates the Fish Finder recipe to combine an Echo Shard with Tide's four fishing instruments.
 
 ### Lullaby of the New Moon
 
@@ -79,6 +103,7 @@ Issues and compatibility fixes will only be addressed when they affect the modpa
   - **Super Blue Moon** (Rare): A stronger Blue Moon with much more XP, much cheaper anvil and enchanting costs, a bigger beacon range, and more luck.
   - **Super Frost Moon** (Rare): No monsters spawn at all, and you take less damage.
   - **Super Eternal Moon** (Rare): Crops drop four times as much.
+- Adds hidden advancements for Questlog. The first encounter with each moon records its discovery, and witnessing it on three later nights unlocks Echoes I, II, and III.
 
 </details>
 
@@ -87,16 +112,23 @@ Issues and compatibility fixes will only be addressed when they affect the modpa
 
 Lavendre Core includes configurable options for managing its features and modular datapacks. Individual features can be enabled or disabled through the mod configuration menu.
 
-Some options are intended for development and testing and are not recommended for regular gameplay. By default, you can find this in `config/lavendre_core.json`:
+Some options are intended for development and testing and are not recommended for regular gameplay. The defaults for `config/lavendre_core_common.json` are shown below.
 
-```groovy
+```json
 {
   "developerMode": false,
   "copperProgression": true,
   "goldToolsInstantBreak": true,
-  "goldArmorSpeed": true
+  "goldArmorSpeed": true,
+  "toolSlot": {
+    "enabled": true,
+    "equipMs": 2000,
+    "pvpFlagAutoEquip": true
+  }
 }
 ```
+
+`config/lavendre_core_client.json` stores Tool Slot display settings and shovel and hoe priority.
 
 </details>
 
