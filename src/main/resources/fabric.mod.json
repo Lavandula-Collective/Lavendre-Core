@@ -13,8 +13,12 @@
   },
   "license": "All Rights Reserved",
   "environment": "*",
+  "mixins": ["lavendre_core.mixins.json"],
   "entrypoints": {
-    "main": ["com.lavandula.lavendrecore.LavendreCore"],
+    "main": [
+      "com.lavandula.lavendrecore.LavendreCore",
+      "com.lavandula.lavendrecore.compat.LunarEventBridge"
+    ],
     "client": ["com.lavandula.lavendrecore.client.LavendreCoreClient"],
     "modmenu": ["com.lavandula.lavendrecore.client.LavendreModMenu"]
   },

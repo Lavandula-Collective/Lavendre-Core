@@ -1,0 +1,29 @@
+{
+  "type": "kaleidoscope_cookery:stockpot",
+  "finished_texture": "kaleidoscope_cookery:stockpot/default_finished_bobo",
+  "carrier": [],
+  "ingredients": [
+    {
+      "tag": "lavendre:dried_tea_leaves"
+    },
+    {
+      "tag": "lavendre:dried_tea_leaves"
+    },
+    {
+      "tag": "lavendre:dried_tea_leaves"
+    },
+    {
+      "tag": "c:eggs"
+    },
+    {
+      "tag": "c:eggs"
+    },
+    {
+      "tag": "c:eggs"
+    }
+  ],
+  "result": {
+    "count": 3,
+    "id": "kaleidoscope_cookery:tea_egg"
+  }
+}

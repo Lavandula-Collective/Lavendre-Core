@@ -1,0 +1,11 @@
+{
+  "type": "farm_and_charm:drying",
+  "recipe_type": "MEAT",
+  "ingredient": {
+    "item": "herbalbrews:dried_green_tea"
+  },
+  "result": {
+    "id": "herbalbrews:dried_oolong_tea",
+    "count": 1
+  }
+}

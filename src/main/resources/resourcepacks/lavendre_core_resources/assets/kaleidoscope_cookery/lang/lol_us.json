@@ -1,0 +1,14 @@
+{
+  "block.kaleidoscope_cookery.stove": "Stone Cooking Stove Thingy",
+  "item.kaleidoscope_cookery.iron_kitchen_knife": "Iron Butcher Knife",
+  "item.kaleidoscope_cookery.gold_kitchen_knife": "Gold Butcher Knife",
+  "item.kaleidoscope_cookery.diamond_kitchen_knife": "Sparkly Butcher Knife",
+  "item.kaleidoscope_cookery.netherite_kitchen_knife": "Spooky Butcher Knife",
+  "tooltip.kaleidoscope_cookery.oil": "Get by pokey pig, pig man, hog beast wif butcher knife",
+  "tooltip.kaleidoscope_cookery.chopping_board": "Use butcher knife to make tiny bits",
+  "advancements.kaleidoscope_cookery.iron_knife.description": "Get your first butcher knife thingy! Nya~",
+  "advancements.kaleidoscope_cookery.netherite_knife.description": "Make the butcher knife extra spooky and strong! Purr...",
+  "advancements.kaleidoscope_cookery.dangerous_chef.description": "Poke the big pig man with butcher knife for scary fun! Nya~",
+  "advancements.kaleidoscope_cookery.chopping_board.description": "Use butcher knife on wood board to make new stuff! Purr...",
+  "kaleidoscope_cookery.ponder.shawarma_spit.text_7": "Safer way is to use butcher knife to take food..."
+}

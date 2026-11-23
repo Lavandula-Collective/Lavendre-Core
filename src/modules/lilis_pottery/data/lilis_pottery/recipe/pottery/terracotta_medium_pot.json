@@ -1,0 +1,10 @@
+{
+  "type": "lilis_pottery:pottering",
+  "inputItem": {
+    "item": "minecraft:terracotta"
+  },
+  "outputItem": {
+    "count": 1,
+    "id": "handcrafted:terracotta_medium_pot"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "block.kaleidoscope_cookery.stove": "石烹竈",
+  "item.kaleidoscope_cookery.iron_kitchen_knife": "鐵屠刀",
+  "item.kaleidoscope_cookery.gold_kitchen_knife": "金屠刀",
+  "item.kaleidoscope_cookery.diamond_kitchen_knife": "金剛屠刀",
+  "item.kaleidoscope_cookery.netherite_kitchen_knife": "玄鈺屠刀",
+  "advancements.kaleidoscope_cookery.iron_knife.title": "功夫再高也怕屠刀",
+  "advancements.kaleidoscope_cookery.iron_knife.description": "得首屠刀。",
+  "advancements.kaleidoscope_cookery.netherite_knife.description": "昇屠刀至玄鈺之等。",
+  "advancements.kaleidoscope_cookery.oil.description": "殺豕屬以屠刀而得油。",
+  "advancements.kaleidoscope_cookery.dangerous_chef.description": "殺暴豕靈以屠刀。",
+  "advancements.kaleidoscope_cookery.stove.description": "燃首之石烹竈而啟嘉餚之旅！",
+  "advancements.kaleidoscope_cookery.pot.description": "製一鍋而熱之石烹竈上。",
+  "advancements.kaleidoscope_cookery.stockpot.description": "製一釜而熱之石烹竈上。"
+}
